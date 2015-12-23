@@ -1,7 +1,397 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Theme Company</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <style>
+    body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+    }
+
+    h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+
+    h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 10px;
+      margin-top: 40px;
+    }
+
+    .jumbotron {
+      background-color: #f4511e;
+      color: #fff;
+      padding: 25px 25px;
+      font-family: Montserrat, sans-serif;
+    }
+
+    .container-fluid {
+      padding: 20px 100px ;
+    }
+
+    .bg-grey {
+      background-color: #f6f6f6;
+    }
+
+    .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+    }
+
+    .logo {
+      color: #f4511e;
+      font-size: 200px;
+    }
+
+    .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+    }
+
+      .thumbnail img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 10px;
+      }
+
+    .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+    }
+
+    .carousel-indicators li {
+      border-color: #f4511e;
+    }
+
+      .carousel-indicators li.active {
+        background-color: #f4511e;
+      }
+
+    .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+    }
+
+    .item span {
+      font-style: normal;
+    }
+
+    .panel {
+      border: 1px solid #f4511e;
+      border-radius: 0 !important;
+      transition: box-shadow 0.5s;
+    }
+
+      .panel:hover {
+        box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+      }
+
+    .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+    }
+
+    .panel-heading {
+      color: #fff !important;
+      background-color: #f4511e !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+
+    .panel-footer {
+      background-color: white !important;
+    }
+
+      .panel-footer h3 {
+        font-size: 32px;
+      }
+
+      .panel-footer h4 {
+        color: #aaa;
+        font-size: 14px;
+      }
+
+      .panel-footer .btn {
+        margin: 15px 0;
+        background-color: #f4511e;
+        color: #fff;
+      }
+
+    .navbar {
+      margin-bottom: 0;
+      background-color: #f4511e;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+    }
+
+      .navbar li a, .navbar .navbar-brand {
+        color: #fff !important;
+      }
+
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+    }
+
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+    }
+
+    footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+    }
+
+    .slideanim {
+      visibility: hidden;
+    }
+
+    .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+    }
+
+    @keyframes slide {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+      }
+    }
+
+    @-webkit-keyframes slide {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+      }
+
+      .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .logo {
+        font-size: 150px;
+      }
+    }
+  </style>
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <div class="jumbotron text-left">
+    <h1 class="text-center">Aussie Marine service</h1>
+    <p>We are fusion of shipping agency as well as marine survey to cater as one stop shop to shipping industry. Our business philosophy has always been to make you customer successful and profitable and in turn your own success is guaranteed. we pride ourselves in making any project success and happiness the cornerstone of our daily operations which is the key to creating a growing and prosperous business for both clients and for our team. No job is small for us so try us to see why we are so different from rest of traditional Shipping agency and survey companies.</p>
+  </div>
+
+  <div class="container-fluid">
+    <h2>Who we are</h2>
+    <h4>Mr. Craig Kneale</h4>
+    <p>Having worked for a local shipping agency in Bunbury for nearly 20 years, Craig moved to Geraldton 19 years ago to head up as Port Services Manager for Giacci Port Services. This new initiative, for the Giacci Group, brought the Mine to Port relationship closer and provide seamless logistics and an accountability not experienced before. This modest start of 170,000 tonnes of cargo and Craig on his own, the business now handles in excess of 11 million tonnes with four operations staff.  Giacci Port Services now operates in two other states namely Darwin & South Australia.
+
+Craig is also well known to MMG and Karrara shipping (Part owner of Ansteel) having looked after their Geraldton shed management and shipping activities from 1996 until March, 2012.
+
+This growth of this shipping agency has solely been attributed to Craig’s customer service, attention to detail and above all a “can do “attitude.
+
+Of Craig’s 38 years’ experience in the shipping industry, all of this has been developed specifically in the Bunbury and Geraldton Ports with focus on handling bulk minerals and commodities.
+
+Over this time Craig had been dealing with reputable firms such as Iluka Resources (previously RGC & Westralian Sands), Sinosteel Midwest, Mount Gibson Iron Ore, Crosslands, Jabiru Metals & Oz Minerals to name a few. This involved carrying out all shipping requirements with a sound knowledge of export processes including cargo documentations, hold surveys and cargo sampling.
+
+After Giacci Port Services brought by Qube ports, Craig ventured out to form his own shipping and operations company, Batavia Shipping.   From this he has been contracted by Mount Gibson Mining, the biggest Iron Ore exporter in Geraldton, at the time, to manage and oversee the complete port and facility operation for both mine sites namely Tallering Peak and Extension Hill, at the port of Geraldton. Mount Gibson currently exports approx. 6mtpa from Geraldton.
+Since the company’s inception, Batavia Shipping has also attracted several other reputable companies to which the company provides outstanding customer service.
+
+Since Batavia Shipping has commenced, Craig believes the edge that his company has over its competitors is the experience, dedication and keenness to foster relationships with customers and demonstrate competency without complacency.
+</p>
+    <h4>Mr. Craig Kneale</h4>
+    <p>
+      Having worked for a local shipping agency in Bunbury for nearly 20 years, Craig moved to Geraldton 19 years ago to head up as Port Services Manager for Giacci Port Services. This new initiative, for the Giacci Group, brought the Mine to Port relationship closer and provide seamless logistics and an accountability not experienced before. This modest start of 170,000 tonnes of cargo and Craig on his own, the business now handles in excess of 11 million tonnes with four operations staff.  Giacci Port Services now operates in two other states namely Darwin & South Australia.
+
+      Craig is also well known to MMG and Karrara shipping (Part owner of Ansteel) having looked after their Geraldton shed management and shipping activities from 1996 until March, 2012.
+
+      This growth of this shipping agency has solely been attributed to Craig’s customer service, attention to detail and above all a “can do “attitude.
+
+      Of Craig’s 38 years’ experience in the shipping industry, all of this has been developed specifically in the Bunbury and Geraldton Ports with focus on handling bulk minerals and commodities.
+
+      Over this time Craig had been dealing with reputable firms such as Iluka Resources (previously RGC & Westralian Sands), Sinosteel Midwest, Mount Gibson Iron Ore, Crosslands, Jabiru Metals & Oz Minerals to name a few. This involved carrying out all shipping requirements with a sound knowledge of export processes including cargo documentations, hold surveys and cargo sampling.
+
+      After Giacci Port Services brought by Qube ports, Craig ventured out to form his own shipping and operations company, Batavia Shipping.   From this he has been contracted by Mount Gibson Mining, the biggest Iron Ore exporter in Geraldton, at the time, to manage and oversee the complete port and facility operation for both mine sites namely Tallering Peak and Extension Hill, at the port of Geraldton. Mount Gibson currently exports approx. 6mtpa from Geraldton.
+      Since the company’s inception, Batavia Shipping has also attracted several other reputable companies to which the company provides outstanding customer service.
+
+      Since Batavia Shipping has commenced, Craig believes the edge that his company has over its competitors is the experience, dedication and keenness to foster relationships with customers and demonstrate competency without complacency.
+    </p>
+
+    <h4>James Jobey</h4>
+    <p>
+      Due to the increase in business activity at Batavia Shipping, James Jobey joined the company as an external advisor.  With a strong finance and operational background of 15 years in the shipping industry, James had also managed the Giacci Port Services business in Geraldton. James comes to Batavia with a sound knowledge of all aspects of the shipping industry.
+
+      James has experience with the various finance and commercial facets of the logistics chain from transport, terminal & bulk stevedoring, liner and bulk ships agency operations.
+   </p>
+
+    <h4>Capt SK Sharma</h4>
+    <p>
+      Before coming to Australia he worked with world best shipping companies with good sailing experience on Containers, Bulk carriers, Wood Carrier and special purpose carrier. In 2005 he was offered Marine surveyor role with world biggest survey company SGS Australia. In SGS he worked on different roles and managed team of 16 People with exposure to ship survey, Project and Machinery cargo, and setting up new projects. In 2009 he moved to BVI as North West Manager and carried out work for almost all major companies of Australia including Woodside, Chevron, CBH, BP and Fleetwood. Recently with 4 Master Mariners and other professionals we started our company which caters to the need of shipping facility from Audit till ship’s survey work.     
+    </p>
+  </div>
+
+  <div class="container-fluid">
+    <h2>SERVICES</h2>
+    <h4>Our survey company, Aussie Marine Services, since being incorporated in 2014 our business has gone from strength to strength due to client age and one stop service we provide to our client. We have Seven Master Marine working tirelessly to provide valued added service to our international clients Service we are specialized in </h4>
+    <br>
+        <h4>STOCKPILE MANAGEMENT</h4>
+        <p>Liaise with mine site personnel regarding transportation of product, tonnage’s, arrival times and stockpiling by assay if required.
+Issue daily reports on tonnage’s at port storage.
+Conduct daily moisture testing if required to Dept. of Transport requirements.
+Sampling of cargo if required.
+Issue weekly/monthly movement reports including transportation, tonnes shipped and closing stocks.
+Carry out and issue stock adjustment reports after each shipment due to moisture loss.
+Provide for good housekeeping and maintenance with the port stockpile/storage area.
+Liaise with local Shire and Port Authority on environmental requirements.
+Ensure safety requirements during stockpiling are observed.
+Conduct occupational hygiene surveys as required.
+Advise minesite and marketing personnel of tonnage shipment availability.
+Carry out silica and respiratory dust testing as required by Dept. of Mines.
+Supervise maintenance of plant and equipment.
+Check all shipping related invoices for payment.
+Any other services that may be required for shipment.
+</p>
+        <h4>SHIPPING SUPERINTENDENTS</h4>
+        <p>Distribute shippers declaration to Master of vessel prior to loading.
+Customs documentation and export clearances.
+Issue Australian Maritime Safety Authority with Notice of Intention to Load
+Supervise inspection and preparation of loading plant and equipment.
+Test all loading facilities prior to loading.
+Ensure all safety requirements and practices are carried out by all staff.
+Hatch/hold inspections on the vessel to ensure cleanliness standards prior to loading.
+Arranging initial and final draft surveys if required.
+Co-ordinate loading activities with shippers, sub-contractors, vessel’s agents and local authorities.
+Sampling of cargo to shippers requirements under Australian and International Maritime Organisation standards.
+Moisture testing lot samples as taken if required.
+Supervision of loading operations and maintaining log and tally entries.
+Weight determination by weightometer, weighbridge or draft survey.
+Certification of cargo and moistures and shipping report as required.
+Supervision of trimming of specific cargoes as required by Dept. of Transport.
+Liaise with stevedore regarding wharf loading labour.
+Supervise cleaning of loading plant after shiploading.
+Updating exported tonnages to Customs Dept. after loading.
+Issue Certificates as required - Weight, Inspection, Survey, Sampling and Moisture  etc.
+Any other services that may be required for shipment.
+</p>
+        <h4>AGENCY SERVICES</h4>
+        <p>Ensure terms of Charter Party are to Charterers/Shippers satisfaction.
+Assist shipper with matters relating to voyage Charter Party.
+Reporting to shipper on suitability of each nominated vessel.
+Advise Master’s intended stowage plan, loading rotation and quantity to be loaded.
+Lodgement of berth application with Port Authority and Customs port entry forms prior to vessel’s arrival.
+Liaise with designated Port Authority and Harbourmaster regarding berthing arrangements and berth availability.
+Advise daily reporting of vessel’s ETA at Port.
+Arranging vessel clearance pratique with Quarantine Dept.
+Arranging vessel’s berthing time with Harbourmaster.
+Liaise with Stevedores/shippers on labour requirements for quick despatch.
+Liaise with shippers for hold inspections and loading times.
+Arrange tugs, mooring gangs, customs etc for vessel’s berthing.
+Obtaining required disbursements from the Owners of vessel for port visit.
+Supply husbandry requirements as requested.
+Discuss loading plan/rotation with shippers and local authorities.
+Documentation of Notice of Readiness.
+Preparation of Statement of Facts and Bills of Lading.
+Entering and clearing vessel with Customs Dept.
+Completion of all required Bills of Lading
+Completion of Mate’s Receipt for cargo if required.
+Attend to signing up of documentation with the Master of vessel prior to vessel’s departure.
+Ensure correct cargo loaded to comply with Charter Party.
+Confirm establishment of weight with shipper.
+Arrange sailing time of vessel with Harbourmaster and local authorities including mooring gangs and tugs.
+Forward shipping documents to all parties concerned as soon as possible.
+Advise cargo and quantity loaded, sailing time and ETA discharge port.
+Compilation of documentation for correct load port despatch/demurrage calculations.
+Any other services that may be required for shipment.
+</p>
+        <h4>MARINE INSPECTION</h4>
+
+      <ul class="list-group">
+        <li class="list-group-item">Marine Hull and Condition Surveys.</li>
+        <li class="list-group-item">Grain accredited Surveys as Per Australian Quarantine requirements.</li>
+        <li class="list-group-item">Pre-purchase Vessel Inspections.</li>
+        <li class="list-group-item">OCIMF Inspection.</li>
+        <li class="list-group-item">Vessel Audits (IMCA/OVID)</li>
+        <li class="list-group-item">P&I Club Surveys</li>
+        <li class="list-group-item">ISM, MLC and ISPS Auditsv
+        <li class="list-group-item">Bunker and Draft Surveys</li>
+        <li class="list-group-item">On/Off Hire Surveys</li>
+        <li class="list-group-item">Cargo Surveys</li>
+        <li class="list-group-item">Port Captaincy</li>
+        <li class="list-group-item">Towage Approvalv
+    </ul>
+  </div>
+  <div class="container-fluid bg-grey">
+    <h2 class="text-center">CONTACT</h2>
+    <div class="row">
+      <div class="col-sm-6">
+        <p>For Agency work</p>
+        <p>BATAVIA  SHIPPING  <br />Mr.Craig Neil</p>
+        <p><span class="glyphicon glyphicon-phone"></span> 0418 922280</p>
+        <p><span class="glyphicon glyphicon-phone"></span> 61-08 99645600</p>
+        <p>Fax:61-08 99645500</p>
+      </div>
+      <div class="col-sm-6">
+        <p>For Marine survey work</p>
+        <p>Aussie Marine Services  <br />Capt. SK Sharma</p>
+        <p><span class="glyphicon glyphicon-phone"></span> 0427702259</p>
+        <p><span class="glyphicon glyphicon-phone"></span> :   61-08 99645600</p>
+        <p>Fax:61-08 99645500</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
